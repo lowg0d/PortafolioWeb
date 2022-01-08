@@ -1,0 +1,312 @@
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+
+/*HEADER*/
+.header{
+    background-color: black;
+}
+
+.header::after{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/header-background.png);
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: all 1000ms;
+}
+
+.header:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.header-content{
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    align-items: center;
+    transition: all 1000ms;
+}
+
+.header-content img{
+    width: 130px;
+    height: 130px;
+}
+
+.header-content h2{
+   margin-bottom: 190px;
+}
+
+/*CONTACT*/
+
+.container{
+    width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+/*OTHER*/
+.text{
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+
+.tittle{
+    font-size: 45px;
+    cursor:default;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.grid-2 img{
+    height: 260px;
+}
+
+.bg-light{
+    background-color: #fff;
+    color: #333;
+}
+
+.bg-dark{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.contact{
+    padding: 2rem;
+}
+
+.starlab{
+    padding: 2rem;
+}
+
+.load-animation:hover {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.container h3:hover .load-animation{
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+footer {
+    padding: 0.9rem;
+}
+
+.scroll-icon{
+    position: relative;
+}
+
+.ilink{
+    color: #333;
+    text-decoration: none;
+    border: 0 none;
+}
+
+/*BTN*/
+
+.btn{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+    outline: 1;
+    position: relative;
+    border: 1px solid rgb(255, 255, 255);
+    align-items: center;
+    display: block;
+    text-transform: uppercase;
+    border-radius: 3px;    
+    margin: 30px 160px;
+    padding:10px 20px;
+    background-color: #fff;
+    z-index: 1;
+    transition:         0.4s ease-in;
+    -o-transition:      2s ease-in;
+    -ms-transition:     2s ease-in;
+    -moz-transition:    2s ease-in;
+    -webkit-transition: 0.3s ease-in;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -2;
+    -webkit-transition: all 450ms cubic-bezier(0.230, 1.000, 0.320, 1.000); 
+    font-weight: bold;
+}
+
+.btn:before{
+    font-weight: bold;
+    position:absolute;  
+    content:"";
+    background: url(https://f.cl.ly/items/3H3A0D1N281a2T280F3o/heist.svg) no-repeat center center;
+    width:100px;
+    height:50px;
+    top: 1px;
+    left:0;
+    z-index:-1;
+    opacity:0;
+}
+
+.btn:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.gmail{
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.underline-light {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.underline-light::after {
+    margin: auto;
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.747);
+    transition: width .4s;
+}
+
+.underline-light:hover::after { 
+  width: 100%;
+}
+
+.underline-light:hover {
+  color: rgb(255, 255, 255);
+}
+
+/**/
+.underline-dark {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.underline-dark::after {
+    margin: auto;
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #333;
+    transition: width .4s;
+}
+
+.underline-dark:hover::after { 
+  width: 100%;
+}
+
+.underline-dark:hover {
+    color: #333;
+}
+
+/**/
+.underline-dark-thik {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.underline-dark-thik::after {
+    margin: auto;
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #333;
+    transition: width .4s;
+}
+
+.underline-dark-thik:hover::after { 
+  width: 100%;
+}
+
+.underline-dark-thik:hover {
+    color: #333;
+}
+
+@media(max-width: 560px){
+    .header::after{
+        height: 50vh;
+    } 
+    .header-content{
+        top: 15%;
+        margin-top: 15px;
+        width: 1000px;
+        height: 1050px;
+    }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(370deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes autoplay2 {
+    0% {top: 100%}
+    4% {top: 0%}
+    33.33% {top: 0%}
+    37.33% {top: -100%}
+    100% {top: -100%}
+  }
